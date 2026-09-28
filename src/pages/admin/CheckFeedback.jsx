@@ -8,7 +8,7 @@ const CheckFeedback = () => {
   useEffect(() => {
     const fetchFeedbacks = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/feedback/getfeedback"); // Adjust the URL as needed
+        const response = await axios.get("/feedback/getfeedback"); // Adjust the URL as needed
         console.log(response)
         setFeedbacks(response.data);
       } catch (error) {

@@ -96,7 +96,7 @@ const RegisterPage = () => {
     
     try {
       // In a real app, you would send all the form data including location
-      const response = await axios.post("http://localhost:4000/auth/register", {
+      const response = await axios.post("/auth/register", {
         name: formData.name,
         email: formData.email,
         password: formData.password,

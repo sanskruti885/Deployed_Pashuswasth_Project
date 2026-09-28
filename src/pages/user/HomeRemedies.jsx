@@ -14,7 +14,7 @@ const HomeRemedies = () => {
   const navigate = useNavigate()
   useEffect(() => {
     const fetchRemedies = async () => {
-      const res = await fetch("http://localhost:4000/api/remedies");
+      const res = await fetch("/api/remedies");
       const rec_data = await res.json();
       setRemedies(rec_data.data);
     };

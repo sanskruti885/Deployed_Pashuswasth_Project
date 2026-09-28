@@ -49,7 +49,7 @@ const FeedbackDialog = ({ open, onOpenChange }) => {
     try {
       console.log("Sending feedback:", data);
       
-      const response = await axios.post("http://localhost:4000/feedback/addfeedback", data);
+      const response = await axios.post("/feedback/addfeedback", data);
       
       if (response.data.success) {
         toast({

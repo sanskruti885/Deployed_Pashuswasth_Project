@@ -16,7 +16,7 @@ const ManageDoctors = () => {
 
   // Fetch doctors data
   const get_doctor = async () => {
-    const res = await fetch("http://localhost:4000/doctor/getDoctors");
+    const res = await fetch("/doctor/getDoctors");
     const rec_data = await res.json();
     setDoctors(rec_data.data);
     setAllDoctors(rec_data.data); // Store original data
@@ -57,7 +57,7 @@ const ManageDoctors = () => {
     if (!confirmDelete) return;
 
     try {
-      const response = await axios.delete(`http://localhost:4000/doctor/deleteDoctor/${doctorId}`);
+      const response = await axios.delete(`/doctor/deleteDoctor/${doctorId}`);
       if (response.status === 200) {
         toast({ title: "Doctor Deleted", description: "The doctor record has been removed." });
         get_doctor(); // Refresh list of doctors

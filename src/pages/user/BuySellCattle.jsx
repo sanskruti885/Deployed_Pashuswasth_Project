@@ -63,7 +63,7 @@ const BuySellCattle = () => {
   useEffect(() => {
     const fetchListings = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/buysell/all"); // Adjust the API URL
+        const response = await axios.get("/buysell/all"); // Adjust the API URL
         console.log(response.data)
         console.log("hiii")
         setCattleListings(response.data);

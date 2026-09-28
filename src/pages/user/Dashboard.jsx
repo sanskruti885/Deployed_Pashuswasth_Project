@@ -100,7 +100,7 @@ const Dashboard = () => {
       console.log("hiiiii")
       console.log(id)
       console.log(data)
-      const res = await axios.put(`http://localhost:4000/buysell/updateCattle/${id}`, data);
+      const res = await axios.put(`/buysell/updateCattle/${id}`, data);
       console.log(res.data);
       toast({ title: "Cattle Updated", description: "The cattle has been updated." });
       navigate(`/user`)
@@ -115,7 +115,7 @@ const Dashboard = () => {
       try{
         const user = JSON.parse(localStorage.getItem("user"));
          const userId = user?.id;
-        const response = await axios.get(`http://localhost:4000/buysell/getspecific?userId=${userId}`)
+        const response = await axios.get(`/buysell/getspecific?userId=${userId}`)
         setCattle(response.data);
       }catch(error){
         console.log("Error fetching catlle data: ",error);
@@ -128,7 +128,7 @@ const Dashboard = () => {
     try{
       const user = JSON.parse(localStorage.getItem("user"));
        const userId = user?.id;
-      const response = await axios.get(`http://localhost:4000/buysell/getspecific?userId=${userId}`)
+      const response = await axios.get(`/buysell/getspecific?userId=${userId}`)
       setCattle(response.data);
     }catch(error){
       console.log("Error fetching catlle data: ",error);
@@ -166,7 +166,7 @@ const Dashboard = () => {
     if (!confirmDelete) return;
 
     try {
-      const response = await axios.delete(`http://localhost:4000/buysell/deleteCattle/${cattleId}`);
+      const response = await axios.delete(`/buysell/deleteCattle/${cattleId}`);
       if (response.status === 200) {
         toast({ title: "Cattle Deleted", description: "The cattle record has been removed." });
         fetchcattle1();

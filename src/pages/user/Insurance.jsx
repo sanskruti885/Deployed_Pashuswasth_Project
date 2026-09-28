@@ -5,7 +5,7 @@ const InsuranceSchemes = () => {
   const [schemes, setSchemes] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:4000/api/insurance')
+    axios.get('/api/insurance')
       .then(res => {
         if (Array.isArray(res.data)) {
           setSchemes(res.data);

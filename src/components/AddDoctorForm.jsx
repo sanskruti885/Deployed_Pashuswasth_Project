@@ -57,7 +57,7 @@ const AddDoctorForm = ({ doctor }) => {
     if (doctors) {
       // Update existing doctor
       console.log("in put")
-      response = await axios.put(`http://localhost:4000/doctor/updateDoctor/${resourceId}`, values, {
+      response = await axios.put(`/doctor/updateDoctor/${resourceId}`, values, {
         headers: {
           "Content-Type": "application/json"
         }
@@ -72,7 +72,7 @@ const AddDoctorForm = ({ doctor }) => {
     } else{
       console.log("in add")
     try {
-      const response = await axios.put("http://localhost:4000/doctor/addDoctor", values, {
+      const response = await axios.put("/doctor/addDoctor", values, {
         headers: {
           "Content-Type": "application/json",
         },

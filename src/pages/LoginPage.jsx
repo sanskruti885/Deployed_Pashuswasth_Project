@@ -33,7 +33,7 @@ const LoginPage = () => {
   const login = async (email, password, usertype = "Farmer") => {
     try {
       console.log("Attempting login...");
-      const response = await axios.post("http://localhost:4000/auth/login", {
+      const response = await axios.post("/auth/login", {
         email,
         password,
         usertype

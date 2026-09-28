@@ -16,7 +16,7 @@ const SearchDoctors = () => {
   useEffect(() => {
     setTimeout(() => {
       const mockDoctors = async () => {
-        const res = await fetch("http://localhost:4000/doctor/getDoctors");
+        const res = await fetch("/doctor/getDoctors");
         console.log(res)
         const rec_data = await res.json();
         setDoctors(rec_data.data)

@@ -8,7 +8,7 @@
 //   const [searchTerm, setSearchTerm] = useState(""); // Search state
 
 //   useEffect(() => {
-//     axios.get("http://localhost:4000/api/diseases")
+//     axios.get("/api/diseases")
 //       .then(response => {
 //         const data = response.data;
 //         console.log("Fetched Data:", data);
@@ -97,7 +97,7 @@ export default function DiseaseList() {
   const [searchTerm, setSearchTerm] = useState(""); // Search state
 
   useEffect(() => {
-    axios.get("http://localhost:4000/api/diseases")
+    axios.get("/api/diseases")
       .then(response => {
         const data = response.data;
         console.log("Fetched Data:", data);

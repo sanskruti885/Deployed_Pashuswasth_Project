@@ -10,7 +10,7 @@ const VideoTutorials = () => {
   const navigate = useNavigate()
   useEffect(() => {
     const fetchRemedies = async () => {
-      const res = await fetch("http://localhost:4000/api/basiccare");
+      const res = await fetch("/api/basiccare");
       console.log(res)
       const rec_data = await res.json();
       setRemedies(rec_data.data);
