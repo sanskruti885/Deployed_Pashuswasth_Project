@@ -2,9 +2,7 @@ import Doctors from "../model/DoctorModel.js";
 
 export const showDoctors = async(req,res,next)=>{
     try{
-        console.log("In controller")
         const doctors = await Doctors.find({})
-        console.log(doctors)
         res.status(200).json({sucess:true, data: doctors})
     }catch(err){
         next(err)
@@ -13,7 +11,6 @@ export const showDoctors = async(req,res,next)=>{
 
 export const addDoctor = async (req, res) => {
     try {
-        console.log("Received Data in Backend:", req.body);
       const { resourceId, name, specialty, location, experience, rating, phone, email, about, image } = req.body;
   
       const newDoctor = new Doctors({
@@ -40,10 +37,8 @@ export const addDoctor = async (req, res) => {
   
 
   export const deleteDoctor = async (req, res) => {
-    console.log("In delete doctor")
     try {
         const { id } = req.params;
-        console.log("Received delete request for ID:", id);
         const deletedDoctor = await Doctors.findByIdAndDelete(id);
         if (!deletedDoctor) {
             return res.status(404).json({ message: "Doctor not found" });

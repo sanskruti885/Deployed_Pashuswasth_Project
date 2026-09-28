@@ -4,7 +4,6 @@ import Register from '../model/RegisterModel.js'
 
 export const registerUser = async (req, res) => {
   try {
-    console.log("In register")
     const { name, email, phone, password, location, language } = req.body;
 
     // Check if user exists
@@ -27,10 +26,8 @@ export const registerUser = async (req, res) => {
   }
 };
 export const login = async (req, res) => {
-    console.log("inside login")
     try {
       const { email, password, usertype = "Farmer" } = req.body;
-      console.log(req.body)
       // Check if user exists in the database
       const user = await Register.findOne({ email,usertype});
   

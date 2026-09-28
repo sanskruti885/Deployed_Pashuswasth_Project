@@ -15,7 +15,12 @@ const port = process.env.PORT || 4000
 connectDB()       //config file
 
 // Middleware
-app.use(cors())
+app.use(cors({
+    origin: [
+      "http://localhost:3000",
+      "https://your-frontend.vercel.app"
+    ]
+  }))
 app.use(express.json())
 
 //chatbot
