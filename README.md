@@ -1,69 +1,86 @@
-# Welcome to your Lovable project
+# PashuSwasth-Doot 🐄🌾
 
-## Project info
+Live Demo: https://pashuswasthdooth.onrender.com/
 
-**URL**: https://lovable.dev/projects/da0788d0-27b8-4122-ae8e-7d7aeda78c4a
+**PashuSwasth-Doot** is a web-based livestock healthcare and management platform designed to connect farmers directly with qualified veterinary professionals and essential livestock management tools[cite: 1, 2]. The platform offers an end-to-end solution for animal healthcare, disease awareness, educational resources, livestock marketplace trading, and government insurance schemes[cite: 1, 2].
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🌟 Key Features
 
-**Use Lovable**
+### 🔑 Admin Portal
+* **Doctor Management:** Add, update, search, filter, and remove veterinarian profiles from the platform[cite: 1, 9].
+* **Feedback Management:** Review feedback, inquiries, and ratings submitted by platform users[cite: 1].
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/da0788d0-27b8-4122-ae8e-7d7aeda78c4a) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+### 👨‍🌾 Farmer / User Module
+* **Interactive Dashboard:** Quick-access hub to view listed cattle, access essential health services, and navigate tools[cite: 2, 5].
+* **Find Veterinarians:** Browse and filter qualified veterinarians by specialization (e.g., General Veterinary, Livestock Specialist, Dairy Health, Bovine Reproduction, Animal Nutrition, Veterinary Surgery) with direct contact options via call or email[cite: 1, 2, 6].
+* **Cattle Marketplace (Buy & Sell):**
+  * Create detailed listings for cattle with images, breed, age, gender, price, location, milk yield description, and seller contact info[cite: 1, 2].
+  * Search and filter listings categorized by "For Sale" and "Wanted to Buy"[cite: 1, 2].
+* **Disease Information & Symptom Guide:**
+  * **A-Z Disease Database:** Comprehensive reference library of common cattle diseases[cite: 2].
+  * **Symptom-Based Search:** Search remedies and remedies/treatments based on specified animal symptoms[cite: 2].
+* **Basic Care & Educational Resources:**
+  * **Video Tutorials:** Video guides covering proper feeding, calf care, post-birth care, seasonal care, and treatment tips[cite: 2].
+  * **Curated Articles:** Academic and practical articles on cattle health, nutrition, and behavior[cite: 2].
+  * **Common Healthcare Practices:** Guidelines on health check-ups, vaccination schedules, parasite control, nutrition management, housing, and hoof care[cite: 2, 8].
+  * **Preventive Measures & Precautions:** Detailed checklists for biosecurity, sanitation, vaccination, and calving management[cite: 2].
+* **Popular Questions (FAQ):** Simple, practical answers to common farmer queries regarding cattle health and livestock management[cite: 2, 7].
+* **Insurance Schemes:** Direct access to government and regional livestock insurance schemes and welfare policies[cite: 2].
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🏗️ Technology Stack & Architecture
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Based on the project structure:
 
-Follow these steps:
+* **Frontend:** React, TypeScript, Tailwind CSS, PostCSS
+* **Backend:** Node.js / Express backend service[cite: 10]
+* **Build Tools & Package Manager:** Bun / npm, Vite[cite: 10]
+* **Media Management:** Cloudinary integration for cattle listing image uploads[cite: 2]
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+📁 Project Directory Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/da0788d0-27b8-4122-ae8e-7d7aeda78c4a) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+PashuSwasth-Doot/
+├── .vscode/               # VS Code configuration settings[cite: 12]
+├── backend/               # Express/Node server backend[cite: 12]
+│   ├── config/            # Database and app configurations[cite: 12]
+│   ├── controller/        # Request controllers and logic[cite: 12]
+│   ├── middleware/        # Custom Express middlewares[cite: 12]
+│   ├── model/             # Database schemas/models[cite: 12]
+│   ├── routes/            # API endpoints & route handlers[cite: 12]
+│   ├── uploads/           # Backend media uploads[cite: 12]
+│   ├── .env               # Backend environment variables[cite: 12]
+│   └── server.js          # Entry point for backend server[cite: 12]
+├── dist/                  # Production build output[cite: 12]
+├── node_modules/          # Node dependencies[cite: 12]
+├── public/                # Static public assets[cite: 11, 12]
+├── src/                   # React frontend source code[cite: 11, 12]
+│   ├── components/        # Reusable UI components[cite: 11]
+│   ├── contexts/          # React context providers[cite: 11]
+│   ├── hooks/             # Custom React hooks[cite: 11]
+│   ├── layouts/           # Page layout wrappers[cite: 11]
+│   ├── lib/               # Helper utility libraries[cite: 11]
+│   ├── pages/             # Page views/routes[cite: 11]
+│   ├── utils/             # Helper functions and constants[cite: 11]
+│   ├── .env.local         # Frontend local environment variables[cite: 11]
+│   ├── App.css            # Main application CSS[cite: 11]
+│   ├── App.jsx / App.tsx  # Main React App component[cite: 11]
+│   ├── index.css          # Global styles[cite: 11]
+│   ├── main.jsx / main.tsx# Application DOM entry point[cite: 11]
+│   └── vite-env.d.ts      # Vite TypeScript type declarations[cite: 11]
+├── uploads/               # Shared media upload storage[cite: 11, 12]
+├── .gitignore             # Git ignored files configuration[cite: 12]
+├── bun.lockb              # Bun lockfile[cite: 12]
+├── components.json        # UI Component configuration[cite: 12]
+├── eslint.config.js       # ESLint configuration[cite: 10]
+├── package.json           # Project metadata and dependencies[cite: 10]
+├── package-lock.json      # npm lockfile[cite: 10]
+├── postcss.config.js      # PostCSS configuration[cite: 10]
+├── tailwind.config.js     # Tailwind CSS configuration[cite: 10]
+└── tsconfig.json          # TypeScript compilation configuration[cite: 10]
